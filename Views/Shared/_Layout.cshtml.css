@@ -1,0 +1,90 @@
+﻿.buscador {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.col {
+  text-align: center;
+}
+
+footer {
+  background-color: #F3E0B5;
+  border-top: black 1px;
+  position: absolute;
+  width: 100%;
+  padding: 10px 0 0 0;
+  margin: 0;
+  border-top: 4px #ffa500 solid;
+  bottom: 0;
+}
+
+footer h6 {
+  color: #E38B29;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer a {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 0;
+}
+
+footer a:hover {
+  color: #ffa500;
+}
+
+footer .container {
+  margin-bottom: 0;
+}
+
+.img-logo {
+  height: auto;
+  width: auto;
+  max-height: 4rem;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: #FECD70;
+  border-bottom: 4px #ffa500 solid;
+}
+
+::placeholder {
+  color: lightgray;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.txt-logo {
+  height: auto;
+  width: auto;
+  max-height: 3rem;
+  margin-left: 15px;
+  margin-right: 40px;
+}
+
+.txt-logo-footer {
+  height: auto;
+  width: auto;
+  margin-top: 15px;
+  max-height: 2.8rem;
+}
+
+/* COLORES A UTILIZAR */
+/* LINKS
+https://colorhunt.co/palette/fdeedcffd8a9f1a661e38b29
+https://colorhunt.co/palette/e3c770fecd70ffae6df3e0b5 */
+.Colores {
+color: #E38B29;
+color: #F1A661;
+color: #FFD8A9;
+color: #FDEEDC;
+color: #E3C770;
+color: #FECD70;
+color: #FFAE6D;
+color: #F3E0B5;
+color: #ffa500;
+}

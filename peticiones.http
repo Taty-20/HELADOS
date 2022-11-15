@@ -1,0 +1,40 @@
+GET https://localhost:7162/api/producto HTTP/1.1
+Accept: application/json
+
+GET https://localhost:7162/api/producto/1 HTTP/1.1
+Accept: application/json
+
+POST https://localhost:7162/api/producto HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+GET https://gorest.co.in/public/v2/users HTTP/1.1
+
+POST https://gorest.co.in/public/v2/users HTTP/1.1
+
+POST https://api.sendgrid.com/v3/mail/send HTTP/1.1
+Authorization: Bearer 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
+Content-Type: application/json
+
+{
+  "categories": [
+    "demo"
+  ],
+  "personalizations": [{
+    "to": [{
+        "email": "tatiana_florez@usmp.pe"
+        }]}],
+        "from": {
+            "email": "tatiana_florez@usmp.pe"
+            },
+            "subject": "Hello,HELADERIA TAMS!",
+            "content": [{
+                "type": "text/plain",
+                 "value": "Gracias por Contactarnos"
+                 }],
+}
+
+
+GET https://api.spotify.com/v1/me HTTP/1.1
+Accept: application/json
+Authorization: Bearer BQAaqxjJNiYpQ4jD6HptCexdV8WqF2vwO4GF23WgVPDzJvv0-4_JPHhWVeQ960xWjlyUKOl7sIr7Dn_ovzkNRITBhrwMFrry1TQrkEgVyvUwJOsy57ZrJRY8gWihMoDY60slrE0Pg5GImR-sTiiDSRnAzmHcvJHdE5ptXnT5fegzqfhup9x8sOFYpQsO4dO_fNRQ-BJr_q_y

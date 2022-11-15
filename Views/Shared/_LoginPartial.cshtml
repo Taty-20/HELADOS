@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <form class="form-inline" asp-controller="Proforma" asp-action="Index">
+                @* <input type="submit" class="nav-link btn btn-link text-dark" value="Carrito" />
+                <i class="fa-solid fa-cart-shopping"></i> *@
+
+                <button type="submit" class="nav-link btn btn-link text-dark">
+                    <img src="/images/carrrito.png" height="35px" width="35px" style="margin: 0px 5px;">
+                    @* <i class="fa-solid fa-right-from-bracket"></i> *@
+                </button>
+            </form>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Usuario">
+                <img src="/images/usuario.png" height="35px" width="35px" style="margin: 0px 5px;">
+                @* <i class="fa-solid fa-user"></i> *@
+            </a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+            asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-dark">
+                    <img src="/images/salir.png" height="35px" width="35px" style="margin: 0px 5px;">
+                    @* <i class="fa-solid fa-right-from-bracket"></i> *@
+                </button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a style="font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; margin: 0 5px;" class="nav-link text-white"
+            asp-area="Identity" asp-page="/Account/Register"><strong>REGISTRATE</strong></a>
+        </li>
+        <li class="nav-item">
+            <a style="font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; margin: 0 5px;" class="nav-link text-white"
+            asp-area="Identity" asp-page="/Account/Login"><strong>INGRESAR</strong></a>
+        </li>
+    }
+</ul>

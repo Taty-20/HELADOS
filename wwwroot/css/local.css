@@ -1,0 +1,53 @@
+.carousel {
+    margin-bottom: 2rem auto 500px;
+    border-radius: 30px;
+}
+
+.carousel,
+.slide,
+.carousel .carousel-inner,
+.carousel .carousel-item,
+.carousel .carousel-item img,
+.carousel .carousel-control {
+    border-radius: 30px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.cuerpo {
+    background-color: #FDEEDC;
+}
+
+.imagen-local {
+    height: 420px;
+    width: 540px;
+    margin-bottom: 2rem;
+}
+
+.titulo {
+    background-color: #FFAE6D; 
+    border: white 8px dotted;
+    border-radius: 30px;
+    margin: 1.5rem auto;
+    padding: 0;
+    text-shadow: 0 0 20px white, 0 0 40px white;
+    height: 68px;
+    width: 500px;
+}
+
+.titulo-texto {
+    color: white;
+    font-family: 'Sacramento', cursive;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+.texto-info {
+    margin: 5px 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #FECD70;
+}

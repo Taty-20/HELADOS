@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css" asp-append-version="true">
+    <title>Document</title>
+</head>
+
+<body>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+    <div class="container">
+        <div class="row">
+            <div class="col columna">
+                <div class="texto">
+                    <p class="parrafo">Conoce parte de nuestra historia y como fue posible llegar a convertirnos en la gran familia que
+                        somos hoy en día.</p>
+                </div>
+                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Home"
+                    asp-action="Privacy"><strong>CONOCE MÁS SOBRE NOSOTROS</strong></a>
+            </div>
+            <div class="col columna">
+                <div>
+                    <img class="txt-logo" src="/images/Logo txt 2 Paleta.png">
+                </div>
+                <div>
+                    <img class="img-logo" src="/images/Logo img.png">
+                </div>
+            </div>
+            <div class="col columna">
+                <div class="texto">
+                    <p class="parrafo">Descubre nuestra amplia gama de sabores, diseñados exclusivamente para deleitar a los más
+                        exigentes paladares.</p>
+                </div>
+                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Catalogo"
+                    asp-action="Index"><strong>NUESTRO NUEVOS PRODUCTOS</strong></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

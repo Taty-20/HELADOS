@@ -1,0 +1,77 @@
+﻿@page
+@model LoginModel
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body class="cuerpo">
+    @{
+        ViewData["Title"] = "Iniciar Sesion";
+    }
+
+    <div class="row columna">
+        <div class="col-md-4 objeto">
+            <section>
+                <form id="account" method="post">
+                    <h4>Iniciar Sesión</h4>
+                    <hr class="regla-horizontal">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-floating" style="margin-bottom: 1rem">
+                        <input asp-for="Input.Email" class="form-control" autocomplete="username"
+                            aria-required="true" />
+                        <label asp-for="Input.Email" class="form-label"></label>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating" style="margin-bottom: 1rem">
+                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password"
+                            aria-required="true" />
+                        <label asp-for="Input.Password" class="form-label"></label>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div style="margin-bottom: 1rem">
+                        <div class="checkbox">
+                            <label asp-for="Input.RememberMe" class="form-label">
+                                <input class="form-check-input" asp-for="Input.RememberMe"
+                                    style="margin-right: 10px;" />
+                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                            </label>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 2.5rem">
+                        <button id="login-submit" type="submit" class="w-100 btn btn-lg"
+                            style="background-color: #FFBCA7;">Ingresar</button>
+                    </div>
+                    <div>
+                        <p style="font-size: 15px">
+                            <a id="forgot-password" asp-page="./ForgotPassword" style="text-decoration: none">¿Olvidaste
+                                tu Contraseña?</a><br>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"
+                                style="text-decoration: none">Registrar un Nuevo Usuario</a><br>
+                            <a id="resend-confirmation" asp-page="./ResendEmailConfirmation"
+                                style="text-decoration: none">Reenviar Correo de Confirmación</a><br>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/64b57b2524.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

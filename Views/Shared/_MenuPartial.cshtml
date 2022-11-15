@@ -1,0 +1,48 @@
+@using Microsoft.AspNetCore.Identity
+@using System.Collections.Generic;
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] HeladeriaTAMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HeladeriaTAMS.styles.css" asp-append-version="true" />
+</head>
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+    IdentityUser myidentity = await Task.Run(() => UserManager.GetUserAsync(User));
+    var roles = await Task.Run(() => UserManager.GetRolesAsync(myidentity));
+
+    @if(roles.Contains("Admin") ){  
+
+    
+               
+        <li class="nav-item">
+            <a  style="font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; margin: 0 5px; color: #E38B29;"
+            class="nav-link text-dark bi bi-cart" asp-area="" asp-controller="Producto" asp-action="Index"> <strong>PRODUCTOS</strong></a>
+        </li> 
+
+        <li class="nav-item">
+            <a class="nav-link">
+                 <i style="font-size:5px; color: white;" class="fa">&#xf111;</i>
+             </a>
+         </li>
+
+        <li class="nav-item">
+            <a  style="font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; margin: 0 5px; color: #E38B29;"
+            class="nav-link text-dark bi bi-cart" asp-area="" asp-controller="Pago" asp-action="Index"><strong>PAGO</strong></a>
+        </li> 
+    
+    }
+
+} 

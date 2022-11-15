@@ -1,0 +1,45 @@
+@model HeladeriaTAMS.Models.Proforma
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link rel="stylesheet" href="~/css/carrito.css" asp-append-version="true" /> -->
+  <title>Detalles</title>
+</head>
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 style="margin: 2rem auto 2rem auto; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Edit</h1>
+
+<h4>Proforma</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Proforma" asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="UserID" />
+            <input type="hidden" asp-for="Precio" />
+            <div class="form-group">
+                <label asp-for="Cantidad" class="control-label"></label>
+                <input asp-for="Cantidad" class="form-control" />
+                <span asp-validation-for="Cantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
