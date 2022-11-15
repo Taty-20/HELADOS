@@ -1,0 +1,50 @@
+body {
+    background-image: url(/images/home-fondo.jpg);
+    background-size: 100%;
+}
+
+.boton {
+    border: #E38B29 3px solid;
+    background-color: #FECD70;
+    color: #E38B29;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    width: 300px;
+    padding: 5px 0 3px 0;
+}
+
+.boton:hover {
+    border: white 3px solid;
+    color: white;
+}
+
+.columna {
+    text-align: center;
+}
+
+h1 {
+    color: orange;
+}
+
+.img-logo {
+    height: 200px;
+    width: auto;
+}
+
+.txt-logo {
+    margin: 2rem 0;
+    height: 260px;
+    width: auto;
+}
+
+.texto {
+    margin-top: 11rem;
+}
+
+.parrafo {
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 21px;
+    width: 300px;
+    margin: 0 auto 3rem;
+}

@@ -12,6 +12,6 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 #EL NOMBRE DEL APLICATIVO
-ENV APP_NET_CORE HeladeriaTAMS.dll 
+ENV APP_NET_CORE helados.dll 
 
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet $APP_NET_CORE
